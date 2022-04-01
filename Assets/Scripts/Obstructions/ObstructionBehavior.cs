@@ -6,6 +6,6 @@ public class ObstructionBehavior : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        other.gameObject.GetComponent<UnitBehavior>().KillUnit();
     }
 }
