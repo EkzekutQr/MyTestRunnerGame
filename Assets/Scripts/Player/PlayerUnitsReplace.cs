@@ -60,6 +60,7 @@ public class PlayerUnitsReplace : MonoBehaviour
             GameObject newSpot = Instantiate(spot, Vector3.zero, Quaternion.identity, transform);
             newSpot.GetComponent<SplineFollower>().spline = spline;
             newSpot.GetComponent<SplineFollower>().SetClipRange(0, distanceBetweenChilds * i);
+            newSpot.GetComponent<SplineFollower>().followSpeed = 10;
             childs[i].GetComponent<MoveUnitToSpot>().Spot = newSpot.transform;
             childsSpots.Add(newSpot);
         }
